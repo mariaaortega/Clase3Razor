@@ -1,0 +1,38 @@
+@page
+
+@{
+    var teams= new List <Team>();
+        teams.Add(new Team(10, "Boca"));
+        teams.Add(new Team(12, "River"));
+        teams.Add(new Team(14, "San lorenzo"));
+        teams.Add(new Team(16, "Independiente"));
+        teams.Add(new Team(18, "Racing"));
+        teams.Add(new Team(20, "Gimnasia"));
+
+}
+<div class="row">
+    <div class="col">
+        <table class= "table">
+            <head>
+                <tr>
+                    <th scope= "col"> #Registro</th>
+                    <th scope = "col"> Nombre</th>
+                </tr>
+            </head>
+            <body>
+                @{
+                    foreach (var team in teams)
+                    {
+                       <tr>
+                    <th>#@team.Id </th>
+                    <td> @team.Name </td>
+                    </tr>
+                    }
+                }
+               
+            </body>
+
+        </table>
+
+    </div>
+</div>
